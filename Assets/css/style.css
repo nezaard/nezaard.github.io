@@ -1,6 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #040404;
+  background-color: #d3d3d3;
   color: #fff;
   position: relative;
   background: transparent;
@@ -8,15 +8,15 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/coding.jfif") top right no-repeat;
+  background: #ffffff url("../img/BG-Utama.jpg") top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
   top: 0;
-  height: 100vh;
-  z-index: -1;
-  filter: brightness(15%);
-  -webkit-filter: brightness(15%);
+  height: 100%;
+
+  filter: brightness(50%);
+  -webkit-filter: brightness(50%);
 }
 @media (min-width: 1024px) {
   body::before {
@@ -25,12 +25,12 @@ body::before {
 }
 
 a {
-  color: #bd7b00;
+  color: #DADA00;
   text-decoration: none;
 }
 
 a:hover {
-  color: #bd7b00;
+  color: #DADA00;
   text-decoration: none;
 }
 
@@ -98,7 +98,7 @@ section {
   height: 40px;
 }
 #header .social-links a:hover {
-  background: linear-gradient(to right, cyan, purple);
+  background: linear-gradient(to right, #DADA00, #1c0030);
 }
 @media (max-width: 992px) {
   #header h1 {
@@ -125,7 +125,7 @@ section {
   left: 0;
   top: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: linear-gradient(to right, rgba(0, 255, 255, 0.4), rgba(28, 0, 48, 0.336));
 }
 #header.header-top .social-links,
 #header.header-top h2 {
@@ -178,7 +178,7 @@ section {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgb(255, 255, 255);
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -196,7 +196,7 @@ section {
   height: 5px;
   bottom: -4px;
   left: 0;
-  background: linear-gradient(to right, cyan, purple, #1c0030);
+  background: linear-gradient(to right, #DADA00, #DADA00, #1c0030);
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -245,7 +245,7 @@ section {
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: #1c0030;
     transition: 0.3s;
     z-index: 999;
     margin-top: 0;
@@ -265,7 +265,7 @@ section {
     padding: 10px 0;
     overflow-y: auto;
     transition: 0.3s;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgb(255, 255, 255);
   }
   .navbar-mobile li {
     padding: 12px 20px;
@@ -288,6 +288,8 @@ section {
 
 section {
   overflow: hidden;
+  display: flex;
+  justify-content: center;
   position: absolute;
   width: 100%;
   top: 140px;
@@ -299,7 +301,7 @@ section {
 
 section h1 span {
   color: #fff;
-  border-bottom: 4px solid rgb(189, 123, 0);
+  border-bottom: 4px solid rgb(218, 218, 0);
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -319,9 +321,135 @@ section.section-show {
     top: 80px;
   }
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 0.4em;
+  background-color: rgb(35 24 194);
+  border-radius: 25px;
+  transition: .4s ease-in-out;
+  height: 400px;
+}
+
+.form:hover {
+  transform: scale(1.05);
+  border: 1px solid rgb(0, 67, 122);
+}
+
+#heading {
+  text-align: center;
+  margin: 2em;
+  color: rgb(255, 255, 255);
+  font-size: 1.2em;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 25px;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+
+}
+
+.input-icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: white;
+}
+
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #d3d3d3;
+}
+
+.form .btn {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: auto;
+}
+
+.button1 {
+  position: relative;
+  display: inline-block;
+  margin: auto;
+  padding: 5px 30px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border-radius: 30px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #fff;
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
+  -ms-transition: ease-out 0.5s;
+  -o-transition: ease-out 0.5s;
+}
+
+.button1:hover {
+  color: rgb(35 24 194);
+  box-shadow: inset 0 -100px 0 0 #fff;
+}
+
+.button1:active {
+  transform: scale(0.9);
+}
+
+
+.button2 {
+  padding: 0.5em;
+  padding-left: 2.3em;
+  padding-right: 2.3em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  background-color: #252525;
+  color: white;
+}
+
+.button2:hover {
+  background-color: black;
+  color: white;
+}
+
+.button3 {
+  margin-bottom: 3em;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  background-color: #252525;
+  color: white;
+}
+
+.button3:hover {
+  background-color: red;
+  color: white;
+}
 .card {
-  --color-1: rgb(93, 6, 110);
-  --color-2: rgb(5, 124, 122);
+  --color-1: rgb(218, 218, 0);
+  --color-2: rgb(172, 236, 0);
   --color-3: #75757510;
   margin: auto;
   width: 100%;
@@ -378,6 +506,12 @@ section.section-show {
   transform: scale(0.9);
 }
 
+.login img{
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
 .contact .info-box {
   color: #444444;
   padding: 20px;
@@ -386,7 +520,7 @@ section.section-show {
 }
 .contact .info-box i.bx {
   font-size: 24px;
-  color: cyan;
+  color: #DADA00;
   border-radius: 50%;
   padding: 14px;
   float: left;
@@ -418,7 +552,7 @@ section.section-show {
   transition: 0.3s;
 }
 .contact .info-box .social-links a:hover {
-  color: cyan;
+  color: #DADA00;
 }
 
 @media (max-width: 992px) {
