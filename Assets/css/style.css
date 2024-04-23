@@ -18,9 +18,10 @@ body::before {
   filter: brightness(50%);
   -webkit-filter: brightness(50%);
 }
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   body::before {
     background-attachment: fixed;
+    background-position: center center !important;
   }
 }
 
@@ -98,7 +99,7 @@ section {
   height: 40px;
 }
 #header .social-links a:hover {
-  background: #DADA00;
+  background:#DADA00 ;
 }
 @media (max-width: 992px) {
   #header h1 {
@@ -245,7 +246,7 @@ section {
     right: 0;
     left: 0;
     bottom: 0;
-    background: #1c0030;
+    background: #797924;
     transition: 0.3s;
     z-index: 999;
     margin-top: 0;
@@ -471,6 +472,9 @@ section.section-show {
   }
   .skills img {
     width: 100px;
+  }
+  .bawah {
+    margin-bottom: 30px !important;
   }
 }
 
