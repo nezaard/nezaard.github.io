@@ -1,11 +1,18 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="Assets/img/icon.png" />
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nezaard Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -13,71 +20,209 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+
     <link href="Assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
 
-    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="Assets/css/style.css" />
-
-    <!-- Font -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700"
-      rel="stylesheet"
-    />
-
-    <title>Nezaard Profile</title>
   </head>
   <body>
-    <!-- ======= Header ======= -->
-    <header id="header">
-      <div class="container">
-        <h1><a href="index.html">Nezard Wildan Kurniawan Syah</a></h1>
-        <h2>I'm a <b>System Administrator</b> and also a <b>Computer Engineer</b></h2>
-
-        <nav id="navbar" class="navbar">
-          <ul>
-            <li><a class="nav-link active" href="#header">Home</a></li>
-            <li><a class="nav-link" href="#about">About</a></li>
-            <li><a class="nav-link" href="#skills">Skills</a></li>
-            <li><a class="nav-link" href="#contact">Contact</a></li>
-          </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav>
-        <!-- .navbar -->
-
-        <div class="social-links">
-          <a href="https://twitter.com/nezaaard" class="twitter" target="_blank"
-            ><i class="bi bi-twitter"></i
-          ></a>
-          <a
-            href="https://www.facebook.com/nezaard"
-            class="facebook"
-            target="_blank"
-            ><i class="bi bi-facebook"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/nezaard/"
-            class="instagram"
-            target="_blank"
-            ><i class="bi bi-instagram"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/nezaard"
-            class="linkedin"
-            target="_blank"
-            ><i class="bi bi-linkedin"></i
-          ></a>
+    <section id="home">
+      <div class="background">
+        <svg
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          width="100%"
+          height="100%"
+          viewBox="0 0 1600 900"
+        >
+          <defs>
+            <path
+              id="wave"
+              fill="rgba(97, 106, 107, 0.6)"
+              d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
+              s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z"
+            />
+          </defs>
+          <g>
+            <use xlink:href="#wave" opacity=".4">
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="translate"
+                dur="8s"
+                calcMode="spline"
+                values="270 120; -334 70; 270 120"
+                keyTimes="0; .5; 1"
+                keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                repeatCount="indefinite"
+              />
+            </use>
+            <use xlink:href="#wave" opacity=".6">
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="translate"
+                dur="6s"
+                calcMode="spline"
+                values="-270 120;243 100;-270 120"
+                keyTimes="0; .6; 1"
+                keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                repeatCount="indefinite"
+              />
+            </use>
+            <use xlink:href="#wave" opacity=".9">
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="translate"
+                dur="4s"
+                calcMode="spline"
+                values="0 120;-140 90;0 120"
+                keyTimes="0; .4; 1"
+                keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                repeatCount="indefinite"
+              />
+            </use>
+          </g>
+        </svg>
+      </div>
+      <div class="card-profile">
+        <img src="Assets/img/nezaard.jpeg" />
+        <div>
+          <h2>Nezard Wildan Kurniawan Syah</h2>
+          <h3>Full-Stack System Administrator with Development Expertise</h3>
+          <p>It all starts with a dream, imagine if you were a billionaire.</p>
+          <nav id="navbar_utama" class="navbar_utama">
+            <ul>
+              <li><a class="nav-link" href="#home">Home</a></li>
+              <li><a class="nav-link" href="#about">About</a></li>
+              <li><a class="nav-link" href="#expertise">Expertise</a></li>
+              <li><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+            <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
+          </nav>
+          <div class="social-buttons">
+            <a href="#" class="social-button twitter">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 1227"
+                class="cf-icon-svg"
+              >
+                <path
+                  d="M714.87 553.5L1179 0H1073.85L662.84 491.16 337.26 0H0L488.13 720.79 0 1227h105.15l434.6-510.29 343.62 510.29H1200L714.87 553.5zM579.2 684.38l-50.38-72.27L158.09 88.46h144.32l303.4 434.2 50.4 72.27 386.5 553.46H898.6L579.2 684.38z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-button linkedin">
+              <svg
+                viewBox="0 -2 44 44"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g id="Icons" stroke="none" stroke-width="1">
+                  <g transform="translate(-702.000000, -265.000000)">
+                    <path
+                      d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z"
+                      id="LinkedIn"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </a>
+            <a href="#" class="social-button facebook">
+              <svg
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 310 310"
+                xml:space="preserve"
+              >
+                <g id="XMLID_834_">
+                  <path
+                    id="XMLID_835_"
+                    d="M81.703,165.106h33.981V305c0,2.762,2.238,5,5,5h57.616c2.762,0,5-2.238,5-5V165.765h39.064
+      c2.54,0,4.677-1.906,4.967-4.429l5.933-51.502c0.163-1.417-0.286-2.836-1.234-3.899c-0.949-1.064-2.307-1.673-3.732-1.673h-44.996
+      V71.978c0-9.732,5.24-14.667,15.576-14.667c1.473,0,29.42,0,29.42,0c2.762,0,5-2.239,5-5V5.037c0-2.762-2.238-5-5-5h-40.545
+      C187.467,0.023,186.832,0,185.896,0c-7.035,0-31.488,1.381-50.804,19.151c-21.402,19.692-18.427,43.27-17.716,47.358v37.752H81.703
+      c-2.762,0-5,2.238-5,5v50.844C76.703,162.867,78.941,165.106,81.703,165.106z"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+            <a href="#" class="social-button instagram">
+              <svg
+                width="800px"
+                height="800px"
+                viewBox="0 0 20 20"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g id="Page-1" stroke="none" stroke-width="1">
+                  <g
+                    id="Dribbble-Light-Preview"
+                    transform="translate(-340.000000, -7439.000000)"
+                  >
+                    <g id="icons" transform="translate(56.000000, 160.000000)">
+                      <path
+                        d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792"
+                        id="instagram-[#167]"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
-    </header>
-    <!-- End Header -->
+    </section>
+
+    <!-- <div class="container"> -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light navbar-hidden">
+      <div class="container">
+        <a class="navbar-brand" href="#">Nezaard Wildan</a>
+        <button
+          class="navbar-toggler bg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link active" href="#home">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#expertise">Expertise</a>
+            <a class="nav-link" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- </div> -->
 
     <!-- About -->
     <section id="about" class="about">
@@ -99,28 +244,42 @@
             </div>
             <div class="col-md-7 align-self-center" data-aos="fade-left">
               <p>
-                Saya adalah seorang System Administrator yang andal dan
-                berpengalaman di perusahaan besar di Indonesia yang bergerak di
-                bidang retail. Saya bertanggung jawab untuk menjaga
-                infrastruktur IT agar berjalan lancar dan aman. Sebagai garda
-                terdepan dalam teknologi informasi, saya memiliki pemahaman yang
-                mendalam tentang jaringan, server, storage dan perangkat lunak
-                yang digunakan dalam operasi harian perusahaan.
+                I am a highly skilled IT professional with a strong focus on
+                server and storage management, specializing in NetApp storage
+                management. With proven experience managing large-scale,
+                mission-critical infrastructure at one of Indonesia’s largest
+                retail companies, I thrive in high-complexity environments where
+                system uptime and performance are paramount.
               </p>
               <p>
-                Saya adalah orang yang terorganisir dan memiliki kemampuan
-                analitis yang kuat. Saya dapat dengan cepat mengidentifikasi
-                masalah dan menemukan solusi yang efektif untuk memperbaikinya.
-                Kemampuan komunikasi saya yang baik memungkinkan saya
-                berinteraksi dengan berbagai departemen di perusahaan dan juga
-                dengan perusahaan yang bekerja sama dengan perusahaan saya
-                bekerja. Sebagai seorang System Administrator, saya terbiasa
-                dengan tekanan dan mampu bekerja secara efisien dalam lingkungan
-                yang dinamis. Saya selalu mencari cara untuk meningkatkan
-                efisiensi dan kinerja sistem, sehingga membantu perusahaan dalam
-                mencapai kesuksesan dalam industri retail yang kompetitif.
+                Driven by a commitment to excellence, I combine deep technical
+                expertise in analysis, troubleshooting, and storage optimization
+                with a proactive approach to innovation and continuous
+                improvement. I am passionate about delivering reliable, secure,
+                and efficient IT solutions that support business growth and
+                operational excellence.
               </p>
-              <a href="File/Nezard Wildan Kurniawan S.pdf" class="button" target="_blank">Download CV</a>
+              <a href="CV/Nezard Wildan.pdf" class="button" type="button">
+                <span class="button__text">Download</span>
+                <span class="button__icon"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 35 35"
+                    id="bdd05811-e15d-428c-bb53-8661459f9307"
+                    data-name="Layer 2"
+                    class="svg"
+                  >
+                    <path
+                      d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"
+                    ></path>
+                    <path
+                      d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"
+                    ></path>
+                    <path
+                      d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"
+                    ></path></svg
+                ></span>
+              </a>
             </div>
           </div>
         </div>
@@ -128,101 +287,238 @@
     </section>
     <!-- End About -->
 
-    <!-- Skill -->
-    <section id="skills" class="skills">
+    <section id="expertise" class="expertise">
       <div class="container">
         <div class="card">
-          <div class="row my-3">
+          <div class="row justify-content-center my-3">
             <div class="col">
-              <h1 class="text-center"><span>My Skills</span></h1>
+              <h1 class="text-center"><span>Expertise</span></h1>
             </div>
           </div>
-          <div class="row justify-content-center text-center my-4">
-            <div class="col-md-1 mx-5" data-aos="fade-right">
-              <img
-                src="Assets/img/html.png"
-                alt=""
-                width=""
-                class="img-fluid"
-              />
-            </div>
-            <div class="col-md-1 mx-5" data-aos="fade-right">
-              <img src="Assets/img/css.png" alt="" width="" class="img-fluid" />
-            </div>
-            <div class="col-md-1 mx-5" data-aos="fade-right">
-              <img
-                src="Assets/img/javascript.png"
-                alt=""
-                width=""
-                class="img-fluid"
-              />
-            </div>
-            <div class="col-md-1 mx-5" data-aos="fade-right">
-              <img src="Assets/img/php.png" alt="" width="" class="img-fluid" />
+          <div class="row mb-4 justify-content-center">
+            <div class="cards">
+              <div class="col-md-3 ms-5">
+                <label id="devops">
+                  <input type="checkbox" />
+                  <article>
+                    <div class="front">
+                      <img src="Assets/img/devops.jpg" />
+                      <h3>DevOps Engineer</h3>
+                    </div>
+                    <div class="back">
+                      <p>
+                        Combines skills in software development and system
+                        operations to streamline the process of building,
+                        testing, deploying, and monitoring applications.
+                      </p>
+                    </div>
+                  </article>
+                </label>
+              </div>
+              <div class="col-md-3 ms-5">
+                <label id="infra">
+                  <input type="checkbox" />
+                  <article>
+                    <div class="front">
+                      <img src="Assets/img/infra.jpg" class="mb-2" />
+                      <h3>IT Infrastructure Specialist</h3>
+                    </div>
+                    <div class="back">
+                      <p>
+                        Focuses on the design, implementation, and maintenance
+                        of an organization’s entire IT infrastructure, including
+                        servers, storage, networking, security, and
+                        virtualization.
+                      </p>
+                    </div>
+                  </article>
+                </label>
+              </div>
+              <div class="col-md-3 ms-5">
+                <label id="sysadmin">
+                  <input type="checkbox" />
+                  <article>
+                    <div class="front">
+                      <img src="Assets/img/sysadmin.jpg" class="mb-2" />
+                      <h3>Full-Stack System Administrator</h3>
+                    </div>
+                    <div class="back">
+                      <p>
+                        A system administrator with web development
+                        capabilities, capable of handling tasks across the
+                        entire stack — from infrastructure to application
+                        layer.F
+                      </p>
+                    </div>
+                  </article>
+                </label>
+              </div>
             </div>
           </div>
-          <div class="row justify-content-center text-center my-4">
-            <div class="col-md-1 mx-5" data-aos="fade-right">
-              <img src="Assets/img/c++.png" alt="" width="" class="img-fluid" />
-            </div>
-            <div class="col-md-1 mx-5" data-aos="fade-right">
+        </div>
+      </div>
+      <div class="skils mt-3">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
               <img
-                src="Assets/img/mysql.png"
-                alt=""
-                width=""
+                src="Assets/img/expertise/netapp.png"
+                alt="Gambar 1"
                 class="img-fluid"
               />
             </div>
-            <div class="col-md-1 mx-5" data-aos="fade-right">
+            <div class="swiper-slide">
               <img
-                src="Assets/img/Bootstrap.png"
-                alt=""
-                width=""
+                src="Assets/img/expertise/dell.png"
+                alt="Gambar 2"
                 class="img-fluid"
               />
             </div>
-            <div class="col-md-1 mx-5" data-aos="fade-right">
+            <div class="swiper-slide">
               <img
-                src="Assets/img/arduino.png"
-                alt=""
-                width=""
+                src="Assets/img/expertise/huawei.png"
+                alt="Gambar 3"
+                class="img-fluid"
+                style="max-height: 70% !important"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="Assets/img/expertise/xfusion.png"
+                alt="Gambar 3"
+                class="img-fluid"
+                style="max-width: 60%"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="Assets/img/expertise/lenovo.png"
+                alt="Gambar 3"
                 class="img-fluid"
               />
             </div>
-          </div>
-          <div class="row justify-content-center text-center my-4">
-            <div class="col-md-1 mx-5" data-aos="fade-right">
+            <div class="swiper-slide">
               <img
-                src="Assets/img/NetApp_logo_white.png"
-                alt=""
-                width=""
-                class="img-fluid bawah"
-              />
-            </div>
-            <div class="col-md-1 mx-5" data-aos="fade-right">
-              <img src="Assets/img/images.png" alt="" width="" class="img-fluid bawah" />
-            </div>
-            <div class="col-md-1 mx-5" data-aos="fade-right">
-              <img
-                src="Assets/img/Dell-Logo.png"
-                alt=""
-                width=""
-                class="img-fluid bawah"
-              />
-            </div>
-            <div class="col-md-1 mx-5" data-aos="fade-right">
-              <img
-                src="Assets/img/windows server.png"
-                alt=""
-                width=""
+                src="Assets/img/expertise/hpe.png"
+                alt="Gambar 3"
                 class="img-fluid"
+                style="max-height: 120% !important"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="Assets/img/expertise/brocade.png"
+                alt="Gambar 3"
+                class="img-fluid"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="Assets/img/expertise/vmware.png"
+                alt="Gambar 3"
+                class="img-fluid"
+                style="max-height: 150% !important"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="Assets/img/expertise/html.png"
+                alt="Gambar 3"
+                class="img-fluid"
+                style="max-height: 70% !important"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="Assets/img/expertise/css.png"
+                alt="Gambar 3"
+                class="img-fluid"
+                style="max-height: 75% !important"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="Assets/img/expertise/javascript.png"
+                alt="Gambar 3"
+                class="img-fluid"
+                style="max-height: 60% !important"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="Assets/img/expertise/php.png"
+                alt="Gambar 3"
+                class="img-fluid"
+                style="max-height: 70% !important"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="Assets/img/expertise/mysql.png"
+                alt="Gambar 3"
+                class="img-fluid"
+                style="max-height: 60% !important"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="Assets/img/expertise/C++.png"
+                alt="Gambar 3"
+                class="img-fluid"
+                style="max-height: 70% !important"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="Assets/img/expertise/arduino.png"
+                alt="Gambar 3"
+                class="img-fluid"
+                style="max-height: 60% !important"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="Assets/img/expertise/raspberry.png"
+                alt="Gambar 3"
+                class="img-fluid"
+                style="max-height: 100% !important"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="Assets/img/expertise/windows.png"
+                alt="Gambar 3"
+                class="img-fluid"
+                style="max-height: 100% !important"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="Assets/img/expertise/redhat.png"
+                alt="Gambar 3"
+                class="img-fluid"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="Assets/img/expertise/oracle.png"
+                alt="Gambar 3"
+                class="img-fluid"
+                style="max-height: 30% !important"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="Assets/img/expertise/ubuntu.png"
+                alt="Gambar 3"
+                class="img-fluid"
+                style="max-height: 60% !important"
               />
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- End Skill -->
 
     <!-- Contact -->
     <section id="contact" class="contact">
@@ -233,7 +529,7 @@
               <h1 class="text-center"><span>Contact Me</span></h1>
             </div>
           </div>
-          <div class="row mt-2 mx-3">
+          <div class="row mt-2 mx-3 text-start mb-5">
             <div class="col-md-6 d-flex align-items-stretch">
               <div class="info-box">
                 <i class="bx bx-map"></i>
@@ -247,26 +543,26 @@
                 <h3>Social Profiles</h3>
                 <div class="social-links">
                   <a
-                    href="https://twitter.com/nezaaard"
-                    class="twitter"
+                    href="https://twitter.com/nezaard"
+                    class=""
                     target="_blank"
-                    ><i class="bi bi-twitter"></i
+                    ><i class="bi bi-twitter-x"></i
                   ></a>
                   <a
                     href="https://www.facebook.com/nezaard"
-                    class="facebook"
+                    class=""
                     target="_blank"
                     ><i class="bi bi-facebook"></i
                   ></a>
                   <a
                     href="https://www.instagram.com/nezaard/"
-                    class="instagram"
+                    class=""
                     target="_blank"
                     ><i class="bi bi-instagram"></i
                   ></a>
                   <a
                     href="https://www.linkedin.com/in/nezaard"
-                    class="linkedin"
+                    class=""
                     target="_blank"
                     ><i class="bi bi-linkedin"></i
                   ></a>
@@ -284,71 +580,8 @@
               <div class="info-box">
                 <i class="bx bx-phone-call"></i>
                 <h3>Call Me</h3>
-                <p>+62 82117896810</p>
+                <p>+62 8211789xxxx</p>
               </div>
-            </div>
-          </div>
-          <div class="row justify-content-center my-3">
-            <div class="col-md-6">
-              <div
-                class="alert alert-success alert-dismissible fade show d-none my-alert"
-                role="alert"
-              >
-                <strong>Terima Kasih!</strong> Pesan anda sudah terkirim
-                :)<button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="alert"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <form name="contact-form" class="form-contact">
-                <div class="mb-3">
-                  <label for="nama" class="form-label">Nama</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="nama"
-                    name="nama"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email address</label>
-                  <input
-                    type="email"
-                    name="email"
-                    class="form-control"
-                    id="email"
-                    aria-describedby="emailHelp"
-                  />
-                  <div id="emailHelp" class="form-text">
-                    We'll never share your email with anyone else.
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <label for="pesan" class="form-label">Pesan Anda</label>
-                  <textarea
-                    class="form-control"
-                    id="pesan"
-                    name="pesan"
-                  ></textarea>
-                </div>
-                <button type="submit" class="btn btn-outline-light btn-kirim">
-                  Kirim
-                </button>
-                <button
-                  class="btn btn-dark d-none btn-loading"
-                  type="button"
-                  disabled
-                >
-                  <span
-                    class="spinner-border spinner-border-sm"
-                    role="status"
-                    aria-hidden="true"
-                  ></span>
-                  Loading...
-                </button>
-              </form>
             </div>
           </div>
         </div>
@@ -356,12 +589,34 @@
     </section>
     <!-- End Contact -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="Assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper-container", {
+        slidesPerView: 5, // Default di desktop
+        breakpoints: {
+          // ketika layar <= 768px (tablet & mobile)
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          480: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          992: {
+            slidesPerView: 5,
+            spaceBetween: 40,
+          },
+        },
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
   </body>
 </html>
