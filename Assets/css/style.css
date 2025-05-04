@@ -1,0 +1,813 @@
+/* * {
+  box-sizing: border-box;
+} */
+
+body {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  background: #000000 !important;
+  color: #fdfcfd !important;
+  font-family: "Euclid Circular A", "Poppins" !important;
+  width: 100%;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: none; /* awalnya disembunyikan */
+  z-index: 999;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5) !important; /* Transparansi */
+  backdrop-filter: blur(12px); /* Efek blur */
+  -webkit-backdrop-filter: blur(12spx); /* Untuk browser Safari */
+  z-index: 1000; /* Pastikan navbar di atas konten lain */
+  transition: background 0.3s ease;
+}
+
+.navbar a {
+  color: white !important;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: inline-block;
+}
+
+.navbar .nav-link {
+  all: unset; /* Reset semua properti browser dan Bootstrap */
+  position: relative;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  cursor: pointer;
+  margin: 0 0.5rem; /* jarak antar link */
+}
+
+.navbar .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  width: 0;
+  border-radius: 6px;
+  background: linear-gradient(to right, #0fb48b, #376bda, #a640f0);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover::before,
+.navbar .nav-link.active::before {
+  visibility: visible;
+  width: 100%;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: white;
+}
+
+.navbar-brand {
+  font-family: "Pacifico", sans-serif;
+  font-size: 30px !important;
+}
+
+.background {
+  position: fixed;
+  z-index: -1;
+  top: 70%;
+  left: 50%;
+  right: 0;
+  bottom: -70vh;
+  translate: -50% 0;
+  width: 150vw;
+}
+
+.background svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(3) scaleX(2.25);
+  transform-origin: bottom;
+  box-sizing: border-box;
+  display: block;
+  pointer-events: none;
+}
+
+section {
+  min-height: 100vh;
+}
+
+section#home {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+section#about {
+  padding-top: 6rem;
+}
+
+section#expertise {
+  padding-top: 6rem;
+}
+
+section#contact {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.card-profile {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75vw;
+  max-width: 650px;
+  padding: 50px 30px 50px 20px;
+  background: #121017;
+  border-radius: 24px;
+  padding: 2rem;
+}
+
+.card-profile img {
+  width: 35vw;
+  max-width: 280px;
+  height: 300px;
+  object-fit: cover;
+  margin-left: -60px;
+  margin-right: 30px;
+  border-radius: inherit;
+  box-shadow: 0 60px 40px rgb(0 0 0 / 8%);
+}
+
+.card-profile h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 30px 10px 0;
+}
+
+.card-profile h3 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.75;
+}
+
+.card-profile p {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.social-buttons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  border-radius: 5em;
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 15px #00000027;
+  margin: 0 auto;
+}
+
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px #00000027;
+  transition: 0.3s;
+}
+
+.social-button:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 6px 3px #00000027;
+}
+
+.social-buttons svg {
+  height: 20px;
+  transition: 0.3s;
+}
+
+/* Social Brand Colors */
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.facebook svg {
+  fill: #f2f2f2;
+}
+
+.facebook:hover svg {
+  fill: #3b5998;
+}
+
+.twitter {
+  background-color: #000;
+}
+
+.twitter svg {
+  fill: #fff;
+}
+
+.twitter:hover svg {
+  fill: #000;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.linkedin svg {
+  fill: #f2f2f2;
+}
+
+.linkedin:hover svg {
+  fill: #0077b5;
+}
+
+.instagram {
+  background-color: #c13584;
+}
+
+.instagram svg {
+  fill: #f2f2f2;
+}
+
+.instagram:hover svg {
+  fill: #c13584;
+}
+
+section h1 span {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-image: linear-gradient(to right, #0fb48b, #376bda, #a640f0);
+  background-clip: text;
+}
+
+section h1 span::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #0fb48b, #376bda, #a640f0);
+  margin-top: 5px; /* Sesuaikan jaraknya dengan teks */
+}
+
+.card {
+  --color-3: #75757510;
+  margin: auto;
+  width: 100%;
+  background: var(--color-3) !important;
+  backdrop-filter: blur(12px);
+  align-items: center !important;
+  justify-content: center !important;
+  /* box-shadow: -15px -15px var(--color-1), 15px 15px var(--color-2); */
+}
+
+.about img {
+  opacity: 90%;
+  width: 300px;
+}
+
+.cards {
+  display: flex;
+  gap: 30px;
+}
+
+article {
+  position: relative;
+  perspective: 1000px;
+  width: 300px;
+  height: 320px;
+}
+
+article .front,
+article .back {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  backface-visibility: hidden;
+  backdrop-filter: blur(10px);
+  background: #ffffff;
+  box-shadow: rgba(149, 157, 165, 0.05) 0px 8px 14px;
+  border-radius: 20px;
+  padding: 32px;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.back p {
+  font-size: 20px;
+  color: #b2b5c2;
+}
+
+article .material-symbols-outlined {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 40px;
+}
+
+input {
+  position: absolute;
+  scale: 0;
+}
+
+input:checked ~ article .back {
+  transform: rotateY(0);
+}
+
+input:checked ~ article .front {
+  transform: rotateY(-180deg);
+}
+
+article var {
+  font-style: normal;
+  font-size: 64px;
+  line-height: 1;
+}
+
+article h3 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 22px;
+  color: #000000;
+}
+
+.front img {
+  width: 200px;
+  height: 200px;
+}
+
+#devops {
+  color: #643fe1;
+}
+
+#devops span {
+  background: #edebfb;
+}
+
+#infra {
+  color: #b02ce1;
+}
+
+#infra span {
+  background: #f7e8ff;
+}
+
+#sysadmin {
+  color: #3ac2f0;
+}
+
+#sysadmin span {
+  background: #eef9ff;
+}
+
+.skils {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.swiper-container {
+  height: 10vh;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.3); /* putih semi transparan */
+  backdrop-filter: blur(10px); /* efek blur */
+  -webkit-backdrop-filter: blur(10px); /* dukungan untuk Safari */
+  border-radius: 0px; /* opsional, biar lebih halus */
+}
+
+.swiper-wrapper {
+  height: 100%;
+}
+
+.swiper-slide {
+  height: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  max-height: 50%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
+
+.skils .swiper-slide img:hover {
+  transform: scale(1.1);
+}
+
+.button {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #17795e;
+  background-color: #209978;
+  background-image: linear-gradient(to right, #0fb48b, #376bda, #a640f0);
+  overflow: hidden;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.button,
+.button__icon,
+.button__text {
+  transition: all 0.3s;
+}
+
+.button .button__text {
+  transform: translateX(22px);
+  color: #fff;
+  /* font-weight: 600; */
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(100px);
+  height: 100%;
+  width: 39px;
+  /* background-color: #17795E; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .svg {
+  width: 20px;
+  fill: #fff;
+}
+
+.button:hover {
+  background: linear-gradient(to right, #0fb48b, #376bda, #a640f0);
+}
+
+.button:hover .button__text {
+  color: transparent;
+}
+
+.button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.button:active .button__icon {
+  background-color: #146c54;
+}
+
+.button:active {
+  border: 1px solid #146c54;
+}
+
+.navbar_utama {
+  padding: 0;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+.navbar_utama ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.navbar_utama li {
+  position: relative;
+}
+.navbar_utama li + li {
+  margin-left: 30px;
+}
+.navbar_utama a,
+.navbar_utama a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  white-space: nowrap;
+  transition: 0.3s;
+}
+.navbar_utama a i,
+.navbar_utama a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+.navbar_utama a:before {
+  content: "";
+  border-radius: 5px;
+  position: absolute;
+  width: 0;
+  height: 5px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(to right, #0fb48b, #376bda, #a640f0);
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+.navbar_utama a:hover:before,
+.navbar_utama li:hover > a:before,
+.navbar_utama .active:before {
+  visibility: visible;
+  width: 100%;
+}
+.navbar_utama a:hover,
+.navbar_utama .active,
+.navbar_utama .active:focus,
+.navbar_utama li:hover > a {
+  color: #fff;
+}
+
+/**
+  * Mobile Navigation 
+  */
+.mobile-nav-toggle {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+}
+
+.contact .info-box {
+  color: #444444;
+  padding: 20px;
+  width: 100% !important;
+  background: rgba(255, 255, 255, 0.08);
+}
+.contact .info-box i.bx {
+  font-size: 24px;
+  border-radius: 50%;
+  padding: 14px;
+  float: left;
+  background: linear-gradient(to right, #0fb48b, #376bda, #a640f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contact .info-box h3 {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  margin: 10px 0 8px 68px;
+}
+.contact .info-box p {
+  padding: 0;
+  color: #fff;
+  line-height: 24px;
+  font-size: 14px;
+  margin: 0 0 0 68px;
+}
+.contact .info-box .social-links {
+  margin: 5px 0 0 68px;
+  display: flex;
+}
+.contact .info-box .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  color: #fff;
+  line-height: 1;
+  margin-right: 12px;
+  transition: 0.3s;
+}
+.contact .info-box .social-links a:hover {
+  background: linear-gradient(to right, #0fb48b, #376bda, #a640f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-contact input {
+  position: relative;
+  scale: 1;
+}
+
+.navbar-toggler {
+  display: block; /* Pastikan tombolnya ditampilkan */
+}
+
+@media (max-width: 992px) {
+  .form-contact {
+    padding: 0 2rem;
+  }
+  .navbar-toggler {
+    display: block;
+  }
+  .navbar .navbar-collapse .nav-link::before {
+    visibility: hidden;
+    width: 0;
+  }
+  .navbar .navbar-toggler {
+    display: block;
+  }
+  /* Menambahkan sedikit margin untuk memperbaiki tampilan toggler */
+  .navbar .navbar-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar .nav-link {
+    margin-bottom: 10px !important;
+  }
+
+  .navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(to right, #0fb48b, #376bda, #a640f0);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar .nav-link.active::after {
+    width: 10%; /* Garis bawah muncul saat active */
+  }
+
+  .navbar .nav-link {
+    position: relative; /* Agar ::after bisa ditempatkan dengan tepat */
+  }
+
+  .navbar_utama ul {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .card-profile {
+    flex-direction: column;
+    padding: 2rem;
+    width: 90vw;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-profile img {
+    width: 60vw;
+    height: auto;
+    margin: 0 0 20px 0;
+  }
+
+  .card-profile h2,
+  .card-profile h3,
+  .card-profile p {
+    margin: 0 auto 10px auto;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar_utama ul {
+    /* flex-direction: column; */
+    gap: 10px;
+  }
+
+  .navbar_utama li + li {
+    margin-left: 0;
+  }
+
+  .social-buttons {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  /* .swiper-container {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .swiper-slide {
+    max-width: 100%;
+    padding: 10px;
+  } */
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .about img {
+    margin: 0px !important;
+    height: 200px !important;
+    width: 200px !important;
+  }
+
+  .button {
+    margin: 0 auto;
+  }
+
+  .cards {
+    margin: 0 auto !important;
+  }
+
+  .cards img {
+    width: 200px !important;
+    height: 200px !important;
+    margin: auto !important;
+  }
+
+  .card {
+    text-align: center;
+  }
+
+  .col-md-3.ms-5 {
+    margin: 0 auto !important;
+    width: 100%;
+  }
+
+  .col-md-7 {
+    width: 70% !important;
+  }
+
+  .swiper-slide img {
+    transform: scale(0.8);
+  }
+
+  .skils .swiper-slide img:hover {
+    transform: scale(0.9);
+  }
+}
+
+@media (width <= 600px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px;
+    padding-bottom: 60px;
+    width: 100%;
+  }
+
+  .card h2 {
+    margin-right: 0;
+    font-size: 26px;
+  }
+
+  .card img {
+    width: 100%;
+    max-width: 1000px;
+    height: 250px;
+    /* margin: -100px 0 30px 0; */
+  }
+
+  .card p {
+    max-width: 360px;
+  }
+
+  .swiper-slide img {
+    transform: scale(0.7);
+  }
+
+  .skils .swiper-slide img:hover {
+    transform: scale(0.8);
+  }
+}
