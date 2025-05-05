@@ -811,3 +811,10 @@ article h3 {
     transform: scale(0.8);
   }
 }
+
+
+@media (max-width: 992px) {
+  .social-buttons {
+    gap: 0px;
+  }
+}
