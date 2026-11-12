@@ -1,1 +1,0 @@
-# nezaard.github.io
