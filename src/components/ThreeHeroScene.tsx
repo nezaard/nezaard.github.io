@@ -781,8 +781,8 @@ export const ThreeHeroScene: React.FC<ThreeHeroSceneProps> = ({
         : wp.lookAt[0];
       const targetCenterY = isMobileViewport
         ? stateRef.current.activeSection === 'overview'
-          ? wp.lookAt[1] + 1.15
-          : wp.lookAt[1] + 0.65
+          ? wp.lookAt[1] + 1.55
+          : wp.lookAt[1] + 0.75
         : wp.lookAt[1];
 
       centerpieceGroup.position.x = THREE.MathUtils.damp(
@@ -799,7 +799,7 @@ export const ThreeHeroScene: React.FC<ThreeHeroSceneProps> = ({
       );
 
       // Scale down the entire 3D sculpture centerpiece on mobile so it fits comfortably
-      const targetCenterpieceScale = isMobileViewport ? 0.56 : 1.0;
+      const targetCenterpieceScale = isMobileViewport ? 0.48 : 1.0;
       centerpieceGroup.scale.setScalar(
         THREE.MathUtils.damp(centerpieceGroup.scale.x, targetCenterpieceScale, 5.0, delta)
       );
