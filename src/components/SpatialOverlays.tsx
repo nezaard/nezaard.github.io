@@ -143,7 +143,7 @@ export const SpatialOverlays: React.FC<SpatialOverlaysProps> = ({
       {/* =====================================================================
           MAIN SPATIAL STAGE CONTENT (Ample pb-32 so bottom dock never overlaps cards)
       ===================================================================== */}
-      <div className="flex-1 relative w-full max-w-7xl mx-auto px-4 sm:px-10 pt-20 sm:pt-24 pb-24 sm:pb-32 flex items-center">
+      <div className="flex-1 relative w-full max-w-7xl mx-auto px-5 sm:px-10 pt-24 sm:pt-28 pb-24 sm:pb-32 flex items-center">
         <AnimatePresence mode="wait">
           {/* -----------------------------------------------------------------
               CHAPTER 00: OVERVIEW (Portfolio Hero + 3D Sculpture Centerpiece)
@@ -155,10 +155,10 @@ export const SpatialOverlays: React.FC<SpatialOverlaysProps> = ({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -18 }}
               transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-              className="w-full h-full flex flex-col justify-end sm:justify-between"
+              className="w-full h-full flex flex-col justify-between"
             >
-              {/* Left-aligned Portfolio Hero leaving center/top 3D sculpture unobstructed */}
-              <div className="max-w-xl sm:my-auto pointer-events-auto">
+              {/* Left-aligned Portfolio Hero vertically centered so it's never too low on tall mobile screens */}
+              <div className="max-w-xl my-auto pointer-events-auto">
                 <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs text-zinc-400 mb-2 sm:mb-3">
                   <span className="font-mono text-sky-400">PORTFOLIO</span>
                   <span aria-hidden="true">·</span>
@@ -606,7 +606,7 @@ export const SpatialOverlays: React.FC<SpatialOverlaysProps> = ({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="pointer-events-auto fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-6"
+            className="pointer-events-auto fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center px-4 pt-20 pb-8 sm:p-6"
             onClick={() => onSelectWork(null)}
           >
             <motion.div
@@ -615,7 +615,7 @@ export const SpatialOverlays: React.FC<SpatialOverlaysProps> = ({
               exit={{ opacity: 0, y: 12, scale: 0.97 }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
               onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-2xl rounded-2xl bg-[#0b0b0f] border border-white/[0.12] p-8 sm:p-10 space-y-6 max-h-[85vh] overflow-y-auto"
+              className="w-full max-w-2xl rounded-2xl bg-[#0b0b0f] border border-white/[0.12] p-6 sm:p-10 space-y-5 sm:space-y-6 max-h-[75vh] sm:max-h-[82vh] overflow-y-auto shadow-2xl"
             >
               <div className="flex items-start justify-between gap-4 border-b border-white/[0.08] pb-5">
                 <div>
